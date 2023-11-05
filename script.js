@@ -15,26 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display the chatbot response
         chatOutput.innerHTML = `
             <p><strong>Session Plan:</strong></p>
-            <p>${sessionPlan}</p>
+            <p>${sessionPlan.split("\n").join("<br>")}</p>
         `;
     });
 
     // Replace this function with the actual ChatGPT API call
     function getChatGPTResponse(branchLocation) {
-        // Return the optimized session plan
-        return `Recommended Optimized Session Plan for ${branchLocation}:\n` +
-               `- January: begin 3 month session\n` +
-               `- February: begin 1 month session\n` +
-               `- March: begin 2 month session\n` +
-               `- April: begin 1 month session\n` +
-               `- May: begin 1 month session\n` +
-               `- June: begin 1 month session\n` +
-               `- July: begin 1 month session\n` +
-               `- August: begin 1 month session\n` +
-               `- September: begin 1 month session\n` +
-               `- October: begin 1 month session\n` +
-               `- November: begin 1 month session\n` +
+        // Return the optimized session plan, with HTML line breaks
+        return `Recommended Optimized Session Plan for ${branchLocation}:<br>` +
+               `- January: begin 3 month session<br>` +
+               `- February: begin 1 month session<br>` +
+               `- March: begin 2 month session<br>` +
+               `- April: begin 1 month session<br>` +
+               `- May: begin 1 month session<br>` +
+               `- June: begin 1 month session<br>` +
+               `- July: begin 1 month session<br>` +
+               `- August: begin 1 month session<br>` +
+               `- September: begin 1 month session<br>` +
+               `- October: begin 1 month session<br>` +
+               `- November: begin 1 month session<br>` +
                `- December: begin 3 month session`;
     }
-    
 });
